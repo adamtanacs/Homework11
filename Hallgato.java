@@ -13,11 +13,11 @@ public class Hallgato {
         if (obj == null) {
             return false;
         }
-        if (obj == this) {
-            return true;
-        }
         if (!(obj instanceof Hallgato)) {
             return false;
+        }
+        if (obj == this) {
+            return true;
         }
         Hallgato tmp = (Hallgato) obj;
         if (tmp.nev == nev && tmp.szuletesiEv == szuletesiEv) {
@@ -28,9 +28,6 @@ public class Hallgato {
 
     @Override
     public int hashCode() {
-        int hash = 1;
-        hash = hash + (nev == null ? 0 : nev.hashCode());
-        hash = hash + szuletesiEv;
-        return hash;
+        return java.util.Objects.hash(nev,szuletesiEv);
     }
 }
