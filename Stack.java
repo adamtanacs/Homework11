@@ -11,7 +11,7 @@ public class Stack<T> {
         if (list.size() == 0) {
             throw new StackException("empty stack");
         }
-        T output = list.pop();
+        T output = list.removeFirst();
         return output;
     }
 
