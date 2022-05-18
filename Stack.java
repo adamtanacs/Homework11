@@ -1,10 +1,7 @@
 import java.util.LinkedList;
 
 public class Stack<T> {
-    private LinkedList<T> list = new LinkedList<>();
-
-    public Stack() {
-    }
+    private LinkedList<T> list = new LinkedList<T>();
 
     public void push(T element) {
         list.addFirst(element);
