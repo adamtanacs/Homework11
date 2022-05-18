@@ -8,17 +8,23 @@ public class Hallgato {
         this.szuletesiEv = szuletesiEv;
     }
 
-    // @Override
-    // public boolean equals(Object obj) {
-    // if (obj == null) {
-    // return false;
-    // }
-    // if (obj.nev == nev && obj.szuletesiEv == szuletesiEv)
-    // {
-    // return true;
-    // }
-    // return false;
-    // }
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (obj == this) {
+            return true;
+        }
+        if (!(obj instanceof Hallgato)) {
+            return false;
+        }
+        Hallgato tmp = (Hallgato) obj;
+        if (tmp.nev == nev && tmp.szuletesiEv == szuletesiEv) {
+            return true;
+        }
+        return false;
+    }
 
     @Override
     public int hashCode() {
